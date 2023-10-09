@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel Booking Form</title>
+</head>
+<body>
+  <h1>Hotel Booking Registration Form</h1>
+  <form id="bookingForm">
+    <div class="container">
+        <form id="bookingForm">
+            <h2>Customer Info</h2>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br><br>
+            </div><br>
+            
+            <div>
+              <label for="checkInDate">Check-in Date:</label>
+              <input type="date" id="checkInDate" name="checkInDate" required><br>
+            </div><br>
+
+            <div>
+              <label for="Total No of Days">Total No of Days:</label>
+              <input type="number" id="numberofdays" required><br>
+            </div><br>
+
+            <div>
+               <label for="numOfPersons">Number of Guests:</label>
+               <input type="number" id="numOfPersons" name="numOfPersons" required><br>
+            </div><br>
+            <button type="button" onclick="submitForm()">Book Now</button>
+        </form>
+    </div>
+
+     <div class="container">
+        <h2>Room Information</h2>
+        <p>Select your room type</p>
+        <input list="room type" name="room type">
+       <datalist id="room type">
+         <option value="Delux Room">
+         <option value="Suite Room">
+       </datalist>
+       <br>
+        <p>Select your amenities</p>
+       <input list="Amenities" name="Amenities">
+       <datalist id="Amenities">
+         <option value="AC">
+         <option value="Locker">
+       </datalist>
+<input type="submit" value="Submit">
+     </div>
+
+     <dev>
+        <h2>Room Rates</h2>
+        <P>-Delux Room: 2500/-</P>
+        <P>-Suite Room: 4000/-</P>
+        <P>-AC: 1000/-</P>
+        <P>-Locker: 300/-</P>
+     </dev><br>
+
+     <div>
+      <label for="advanceAmount">Advance Amount:</label>
+      <input type="number" id="advanceAmount" required>
+    </div><br>
+
+    <div>
+      <label for="balance">Balance:</label>
+      <input type="text" id="balance" readonly>
+    </div><br>
+
+    <div>
+      <label for="totalCost">Total Cost:</label>
+      <input type="text" id="totalCost" readonly>
+    </div><br>
+
+    <div>
+      <label for="extraPersons">Extra Persons:</label>
+      <input type="number" id="extraPersons" value="0">
+    </div><br>
+
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+  </form>
+
+</body>
+</html>
